@@ -18,7 +18,6 @@ from matplotlib import pyplot as plt
 
 #text and mining
 from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.feature_extraction.stop_words import ENGLISH_STOP_WORDS
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import train_test_split
 
@@ -98,7 +97,7 @@ def main():
     
     
     # Vector one-hot with english stop words
-    vectorizer = CountVectorizer(stop_words=ENGLISH_STOP_WORDS)
+    vectorizer = CountVectorizer()
     text_vector = vectorizer.fit_transform(X_train.text)
                     
 
